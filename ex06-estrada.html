@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+    <script>
+        /*
+            
+            A AUTOBURACON S/A é uma empresa de administração de rodovias. Como
+            um padrão da empresa, toda rodovia administrada que tem mais de 200km
+            de extensão possui um pedágio a cada 31km e um posto de atendimento ao
+            usuário a cada 23km.
+
+            Peça para o usuário informar o comprimento da rodovia, um número inteiro
+            maior que 200. Valide a entrada com do..while até obter uma resposta correta.
+
+            Em seguida, usando um loop while, percorra os quilômetros da rodovia e 
+            informe com document.write todos aqueles que têm um pedágio ou um posto
+            de atendimento ao usuário da AUTOBURACON S/A.
+
+        */
+
+        let comprimento
+
+        do {
+            comprimento = parseInt(prompt('Comprimento da rodovia (> 200):'))
+        } while(isNaN(comprimento) || comprimento <= 200)
+
+        let km = 1
+
+        while(km <= comprimento) {
+            if(km % 31 === 0) {
+                // document.write(`O km ${km} tem um pedágio<br>`)
+                document.write('O km ' + km + ' tem um pedágio<br>')
+            }
+            if(km % 23 === 0) {
+                document.write(`O km ${km} tem um posto de atendimento ao usuário<br>`)
+            }
+            km++    // Incrementa o quilômetro percorrido
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
