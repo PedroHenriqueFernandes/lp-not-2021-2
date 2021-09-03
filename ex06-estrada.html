@@ -28,8 +28,9 @@
             comprimento = parseInt(prompt('Comprimento da rodovia (> 200):'))
         } while(isNaN(comprimento) || comprimento <= 200)
 
+        /*
         let km = 1
-
+        
         while(km <= comprimento) {
             if(km % 31 === 0) {
                 // document.write(`O km ${km} tem um pedágio<br>`)
@@ -39,6 +40,17 @@
                 document.write(`O km ${km} tem um posto de atendimento ao usuário<br>`)
             }
             km++    // Incrementa o quilômetro percorrido
+        }
+        */
+
+        for(let km = 1; km <= comprimento; km++) {
+            if(km % 31 === 0) {
+                // document.write(`O km ${km} tem um pedágio<br>`)
+                document.write('O km ' + km + ' tem um pedágio<br>')
+            }
+            if(km % 23 === 0) {
+                document.write(`O km ${km} tem um posto de atendimento ao usuário<br>`)
+            }
         }
     </script>
 </head>
