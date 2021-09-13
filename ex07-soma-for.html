@@ -15,6 +15,37 @@
             os dois valores informados (inclusive). Por exemplo, se os números
             informados forem 20 e 25, você somará 20 + 21 + 22 + 23 + 24 + 25.
         */
+
+        let num1, num2, maior, menor, soma = 0
+
+        do {
+            num1 = parseInt(prompt('Informe o primeiro número:'))
+        } while(isNaN(num1))
+
+        do {
+            num2 = parseInt(prompt('Informe o segundo número, diferente do primeiro:'))
+        } while(isNaN(num2) || num2 === num1)
+
+        // Determinando qual dos números é o maior e o menor
+        if(num1 > num2) {
+            maior = num1
+            menor = num2
+        }
+        else {
+            maior = num2
+            menor = num1
+        }
+
+        document.write('NÚMEROS SOMADOS:<br>')
+        
+        // Calculando a soma
+        for(let i = menor; i <= maior; i++) {
+            document.write(i + '<br>')
+            soma += i
+        }
+
+        alert(`A soma dos números entre ${menor} e ${maior} é ${soma}.`)
+
     </script>
 </head>
 <body>
